@@ -9,7 +9,7 @@ pipeline{
         }
         stage("install dependence"){
             steps{
-                'sh npm install'
+                sh 'npm install'
             }
         }
     }
