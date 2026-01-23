@@ -49,7 +49,7 @@ app.post("/api/deploy-info", (req, res) => {
   );
 
   res.json({
-    message: "Deployment info updated successfully"
+    message: "Deployment  info updated successfully"
   });
 });
 
