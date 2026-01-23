@@ -5,23 +5,18 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// View engine
 app.set("view engine", "ejs");
 
-// Path to deploy-info.json
 const deployInfoPath = path.join(__dirname, "data", "deploy-info.json");
 
-// Function to read deploy info
 function getDeployInfo() {
   const data = fs.readFileSync(deployInfoPath, "utf-8");
   return JSON.parse(data);
 }
 
-// Dashboard route
 app.get("/", (req, res) => {
   const deployInfo = getDeployInfo();
 
@@ -33,7 +28,6 @@ app.get("/", (req, res) => {
     lastDeploy: deployInfo.lastDeploy
   });
 });
-// API: Jenkins updates deployment info
 app.post("/api/deploy-info", (req, res) => {
   const { build, version } = req.body;
 
@@ -60,7 +54,6 @@ app.post("/api/deploy-info", (req, res) => {
 });
 
 
-// Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
