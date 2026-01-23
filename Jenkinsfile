@@ -12,6 +12,13 @@ pipeline{
                 sh 'npm install'
             }
         }
+        stage("docker build "){
+            steps{
+                sh  '''
+                docker build -t service-status-dashboard:latest .
+                '''
+            }
+        }
     }
 
 }
