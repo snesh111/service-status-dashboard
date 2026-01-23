@@ -54,6 +54,6 @@ app.post("/api/deploy-info", (req, res) => {
 });
 
 
-app.listen(PORT, () => {
+app.listen(PORT,"0.0.0.0" () => {
   console.log(`server is running on port ${PORT}`);
 });
