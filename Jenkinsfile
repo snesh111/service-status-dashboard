@@ -44,7 +44,21 @@ pipeline{
                 '''
             }
         }
+        stage("Update Dashboard") {
+            steps {
+                sh """
+                  curl -X POST http://3.111.213.40/api/deploy-info \
+                  -H "Content-Type: application/json" \
+                  -d '{
+                    "build": "${BUILD_NUMBER}",
+                    "version": "${GIT_COMMIT}"
+                  }'
+                """
+            }
+        }
     }
 }
+    
+
 
 
