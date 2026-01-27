@@ -4,7 +4,7 @@ Architecture Diagram
 
 ![diagram](diagram/CICD_project.webp)
  
-📌 Project Overview
+--  Project Overview
 
 This project is a lightweight CI/CD Service Status Dashboard that provides a single-click view of the latest deployment status instead of checking multiple tools like Jenkins manually.
 
@@ -20,7 +20,7 @@ Is the application UP or DOWN?
 
 The dashboard is automatically updated by Jenkins during the CI/CD pipeline and deployed using Docker on AWS EC2.
 
-🧠 Problem Statement
+-- Problem Statement
 
 In real CI/CD workflows:
 
@@ -30,7 +30,7 @@ Checking build number, version, deploy time is time-consuming
 
 Beginners often struggle to understand what is currently deployed
 
-👉 This project solves that by providing a simple web dashboard that always shows the latest deployment state.
+--- This project solves that by providing a simple web dashboard that always shows the latest deployment state.
 
  High-Level Architecture
 
@@ -54,7 +54,7 @@ Web EC2: pulls latest Docker image
 
 Dashboard displays updated deployment data
 
-⚙️ CI/CD Flow (End to End)
+---  CI/CD Flow (End to End)
 CI – Continuous Integration
 
 GitHub Webhook triggers Jenkins automatically
@@ -87,7 +87,7 @@ New container is started
 
 Dashboard reflects the latest deployment instantly
 
-📊 Dashboard Capabilities
+--- Dashboard Capabilities
 
 Shows Application Status (UP/DOWN)
 
@@ -99,7 +99,7 @@ Shows last deployment time
 
 Updates automatically after each successful Jenkins build
 
-🔑 Key Commands Used
+---  Key Commands Used
 (Only essential commands)
 
 Jenkins Management
@@ -136,7 +136,7 @@ Used to verify application status after deployment.
 
 These commands are executed either manually during initial setup or automatically as part of the Jenkins CI/CD pipeline.
 
-🎯 What I Learned From This Project
+---  What I Learned From This Project
 CI/CD Concepts
 
 How GitHub Webhooks trigger Jenkins automatically
@@ -163,14 +163,14 @@ Security group configuration (ports, inbound rules)
 
 Understanding public IP changes and service accessibility
 
-✅ Final Takeaway
+----  Final Takeaway
 
 This project demonstrates my ability to design and implement a real-world CI/CD pipeline using industry-standard tools.
 It shows how automated builds, containerized deployments, and cloud infrastructure work together to provide clear deployment visibility
 
 Overall, this project strengthened my understanding of practical CI/CD workflows and how deployment status is monitored in real environments.
 
-🚀 Future Enhancements 
+----  Future Enhancements 
 
 Automatic health checks for application status
 
@@ -182,4 +182,4 @@ Deployment history tracking
 
 Kubernetes-based deployment
 
-🔚 End of README
+-- End of README
